@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ASMIdeaPluginConfiguration">
+    <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
+  <component name="ASMSmaliIdeaPluginConfiguration">
+    <asm skipDebug="true" skipFrames="true" skipCode="false" expandFrames="false" />
+    <groovy codeStyle="LEGACY" />
+  </component>
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/project/MyApplication2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3697916666666667" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_annotation.xml" value="0.25" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_app_list.xml" value="0.3284241531664212" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_apt.xml" value="0.2318840579710145" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_apt2.xml" value="0.3536458333333333" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_google_login.xml" value="0.28541666666666665" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_main.xml" value="0.17604166666666668" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_ractivity1.xml" value="0.31614583333333335" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_ractivity3.xml" value="0.31614583333333335" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_rfragment.xml" value="0.31614583333333335" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/activity_second.xml" value="0.3536458333333333" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/fragment_scrolling.xml" value="0.31614583333333335" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/item_app.xml" value="0.3536458333333333" />
+        <entry key="..\:/project/MyApplication2/app/src/main/res/layout/test_notifycation.xml" value="0.3536458333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

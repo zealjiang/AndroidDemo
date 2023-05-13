@@ -1,0 +1,5 @@
+rootProject.name = "AndroidDemo"
+include ':app'
+include ':lib-processor'
+include ':libjava'
+include ':libkotlin'
