@@ -27,7 +27,6 @@ import java.util.Random;
 public class AdApkInstallOrOpenReceiver extends BroadcastReceiver {
 
     public static final String TAG = "mtest";
-
     public AdApkInstallOrOpenReceiver() {
     }
 
