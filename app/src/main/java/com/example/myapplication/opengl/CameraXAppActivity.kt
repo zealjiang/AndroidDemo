@@ -28,6 +28,7 @@ import androidx.core.content.ContextCompat
 import androidx.core.content.PermissionChecker
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityCameraxAppBinding
+import com.example.myapplication.util.SystemUtil
 import java.text.SimpleDateFormat
 import java.util.Locale
 import java.util.concurrent.ExecutorService
@@ -63,7 +64,11 @@ class CameraXAppActivity : AppCompatActivity() {
         viewBinding.videoCaptureButton.setOnClickListener { captureVideo() }
 
         cameraExecutor = Executors.newSingleThreadExecutor()
+
+
+        SystemUtil.checkServiceStatus(this)
     }
+
 
     private fun takePhoto() {
         // Get a stable reference of the modifiable image capture use case
