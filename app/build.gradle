@@ -78,6 +78,7 @@ dependencies {
     annotationProcessor project(':lib-processor')
     api(name: 'mmkv', ext: 'aar')
     implementation "androidx.core:core-ktx:1.10.1"
+    implementation 'androidx.core:core-google-shortcuts:1.1.0'
     //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"//$kotlin_version"
 
     //arouter

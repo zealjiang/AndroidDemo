@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_sunrise"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="10dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/tv_sunrise_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Sunrise &amp; Sunset"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            />
+        <com.example.myapplication.views.SunriseView
+            android:id="@+id/sunrise_view"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sunrise_title"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="35dp"
+            tools:background="#33ff00"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunshine_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15h 13m"
+            android:textSize="15sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="40dp"
+            app:layout_constraintTop_toTopOf="@+id/sunrise_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunshine duration"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sunshine_duration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sunrise"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="85dp"
+            />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/sunset"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="85dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunrise"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="Sunrise"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/sunrise_view"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunrise_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="04:54 AM"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sunrise"
+            app:layout_constraintStart_toStartOf="@+id/tv_sunrise"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:text="Sunset"
+            android:textSize="10sp"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/sunrise_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tv_sunset_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="18:54 PM"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/tv_sunset"
+            app:layout_constraintEnd_toEndOf="@+id/tv_sunset"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_anim"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:text="anim"
+        app:layout_constraintBottom_toTopOf="@+id/sunrise_view"
+        app:layout_constraintLeft_toLeftOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
