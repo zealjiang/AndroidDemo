@@ -1,15 +1,10 @@
 package com.example.myapplication
 
 import android.content.Intent
-import android.content.pm.PackageManager
 import android.os.Bundle
-import android.provider.Settings
-import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import com.example.myapplication.util.AppUtil
-import com.example.myapplication.util.ShortcutUtil
-import com.example.myapplication.util.WallpaperUtil
+import com.example.myapplication.nfc.NFCBankCardActivity
 
 
 class SunriseActivity : AppCompatActivity() {
@@ -25,6 +20,8 @@ class SunriseActivity : AppCompatActivity() {
             mSunriseView.runAnim()
         }
 
+        startActivity(Intent(this, NFCBankCardActivity::class.java))
+
 /*        val intent = Intent(Settings.ACTION_SETTINGS)
         val resolveInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)
 
@@ -33,10 +30,10 @@ class SunriseActivity : AppCompatActivity() {
 
         Log.d("SunriseActivity", "packageName =$packageName, className = $className")*/
 
-        ShortcutUtil.createShortcut(this, R.drawable.sun,
+/*        ShortcutUtil.createShortcut(this, R.drawable.sun,
             "com.android.settings",
             "com.android.settings.homepage.SettingsHomepageActivity",
-            "设置")
+            "设置")*/
 
 /*        ShortcutUtil.createShortcut(this, R.drawable.sun, "com.android.settings", "com.android.settings.Settings", "设置")
 

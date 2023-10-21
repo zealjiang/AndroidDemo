@@ -39,6 +39,7 @@ android {
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
+            //aidl.srcDirs = ['src/main/aidl']
         }
     }
 
@@ -51,6 +52,10 @@ android {
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        aidl true
     }
 }
 
