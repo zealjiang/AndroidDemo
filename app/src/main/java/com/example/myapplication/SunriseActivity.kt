@@ -1,12 +1,12 @@
 package com.example.myapplication
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.nfc.NFCBankCardActivity
+import com.example.router.compiler.annotation.MRoute
 
-
+@MRoute("/main/SunriseActivity")
 class SunriseActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,7 +20,7 @@ class SunriseActivity : AppCompatActivity() {
             mSunriseView.runAnim()
         }
 
-        startActivity(Intent(this, NFCBankCardActivity::class.java))
+        //startActivity(Intent(this, NFCBankCardActivity::class.java))
 
 /*        val intent = Intent(Settings.ACTION_SETTINGS)
         val resolveInfo = packageManager.resolveActivity(intent, PackageManager.MATCH_DEFAULT_ONLY)

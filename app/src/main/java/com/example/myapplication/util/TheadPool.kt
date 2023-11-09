@@ -1,5 +1,10 @@
 package com.example.myapplication.util
 
+import android.os.HandlerThread
+import android.os.Looper
+import java.util.LinkedHashMap
+import java.util.LinkedList
+import java.util.Stack
 import java.util.concurrent.ArrayBlockingQueue
 import java.util.concurrent.BlockingQueue
 import java.util.concurrent.Executors
@@ -20,6 +25,19 @@ class TheadPool {
         val handler: RejectedExecutionHandler = ThreadPoolExecutor.CallerRunsPolicy() // 拒绝策略
         val executor: ThreadPoolExecutor = ThreadPoolExecutor(
             corePoolSize, maximumPoolSize, keepAliveTime, unit, workQueue, threadFactory, handler)
+
+/*
+        List
+        LinkedList
+        Linked
+        HashMap
+        LinkedHashMap
+        Stack
+        Swip
+        HandlerThread
+        Looper().
+
+*/
 
         return executor
     }

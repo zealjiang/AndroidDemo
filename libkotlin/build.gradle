@@ -5,6 +5,7 @@ plugins {
 
 android {
     compileSdkVersion 33
+    namespace 'com.example.libkotlin'
 
     defaultConfig {
         minSdkVersion 21

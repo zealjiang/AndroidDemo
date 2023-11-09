@@ -1,28 +1,23 @@
 package com.example.myapplication;
 
+import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
-import android.os.Build;
 import android.util.Log;
 import android.widget.Toast;
-
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.LifecycleObserver;
 import androidx.lifecycle.OnLifecycleEvent;
 import androidx.lifecycle.ProcessLifecycleOwner;
-
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.example.myapplication.log.LogManager;
-import com.example.myapplication.onepixel.KeepTaskOnepxActivity;
-import com.example.myapplication.onepixel.KeepTaskOnepxActivity2;
 import com.example.myapplication.util.SystemUtil;
+import com.example.router.SimpleRouter;
 import com.tencent.mmkv.MMKV;
-import com.tencent.mmkv.MMKVLogLevel;
 
 public class MApplication extends Application implements LifecycleObserver {
 
     private static Context mContext;
-
     @Override
     public void onCreate() {
         super.onCreate();
@@ -42,7 +37,14 @@ public class MApplication extends Application implements LifecycleObserver {
             ARouter.openDebug();   // Turn on debugging mode (If you are running in InstantRun mode, you must turn on debug mode! Online version needs to be closed, otherwise there is a security risk)
         }
         ARouter.init(this); // As early as possible, it is recommended to initialize in the Application
+
+
+        //----router----
+        //RouterRegister.INSTANCE.init();
+        SimpleRouter.INSTANCE.init(this);
     }
+
+
 
     private void checkADB(){
         boolean isADBEnable = SystemUtil.isADBEnable();

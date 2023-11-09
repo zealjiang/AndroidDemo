@@ -3,23 +3,18 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 
-import android.Manifest;
-import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.os.Binder;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.DeadObjectException;
 import android.os.DeadSystemException;
-import android.os.Handler;
 import android.provider.Settings;
 import android.util.Log;
 import android.view.View;
@@ -28,29 +23,15 @@ import android.widget.TextView;
 import com.example.myapplication.annotation.BindView;
 import com.example.myapplication.annotation.Butterknife;
 import com.example.myapplication.annotation.InjectDIYLayout;
-import com.example.myapplication.annotation.InjectDIYUtils;
 import com.example.myapplication.annotation.Year;
-import com.example.myapplication.hook.NotificationDemo;
 import com.example.myapplication.hook.OnClickHook;
 import com.example.myapplication.log.LogManager;
-import com.example.myapplication.log.LogUtil;
 import com.example.myapplication.log.MessageClient;
-import com.example.myapplication.onepixel.KeepTaskOnepxActivity;
-import com.example.myapplication.onepixel.KeepTaskOnepxActivity2;
-import com.example.myapplication.onepixel.TaskUtils;
-import com.example.myapplication.proxy.ProxyUtils;
 import com.example.myapplication.util.LibTaskHandler;
-import com.google.android.gms.auth.GoogleAuthUtil;
-import com.google.android.gms.auth.api.credentials.IdToken;
-import com.google.android.gms.auth.api.identity.Identity;
-import com.google.android.gms.auth.api.identity.SignInClient;
-import com.google.android.gms.auth.api.identity.SignInCredential;
+import com.example.router.compiler.annotation.MRoute;
 
-import java.io.IOException;
-import java.lang.reflect.Method;
-import java.util.logging.Logger;
-
-@InjectDIYLayout(R.layout.activity_main)
+@MRoute("/xxx/xxx")
+@InjectDIYLayout(R.layout.activity_takeout_main)
 public class MainActivity extends AppCompatActivity{
 
     public MainActivity mainActivity;
@@ -71,7 +52,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         //InjectDIYUtils.inject(this);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_takeout_main);
         mainActivity = this;
         Log.d("mtest","M onCreate");
 

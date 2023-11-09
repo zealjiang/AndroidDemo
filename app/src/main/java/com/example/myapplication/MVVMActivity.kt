@@ -1,15 +1,21 @@
 package com.example.myapplication
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.ActivityMvvmBinding
+import com.example.myapplication.util.JavaReferenceTest
+import com.example.myapplication.util.ReferenceTest
 import com.example.myapplication.viewmodel.User
 import com.example.myapplication.viewmodel.UserViewModel
+import com.example.router.SimpleRouter
+import com.example.router.compiler.annotation.MRoute
 import java.util.concurrent.ArrayBlockingQueue
 import java.util.concurrent.BlockingQueue
 
 
+@MRoute("/main/MVVMActivity")
 class MVVMActivity: AppCompatActivity() {
 
     private var binding: ActivityMvvmBinding? = null
@@ -35,6 +41,21 @@ class MVVMActivity: AppCompatActivity() {
 
         binding?.btnSetUser?.setOnClickListener {
             userViewModel.updateUserAge(30, "小李")
+        }
+
+
+        ReferenceTest.weakReferenceTest()
+        //JavaReferenceTest.weakReferenceTest()
+
+        binding?.btnTakeout?.setOnClickListener {
+            testRoute()
+        }
+    }
+
+    private fun testRoute() {
+        val clazz = SimpleRouter.navigation("/takeout/MainActivity")
+        clazz?.let {
+            startActivity(Intent(this, it))
         }
     }
 }
