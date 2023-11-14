@@ -4,7 +4,10 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.bean.Model
 import com.example.myapplication.databinding.ActivityMvcBinding
+import com.example.router.compiler.annotation.MRoute
+import com.google.auto.service.AutoService
 
+@MRoute("/main/MVCActivity")
 class MVCActivity: AppCompatActivity() {
 
     private var model: Model? = null

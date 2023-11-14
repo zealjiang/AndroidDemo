@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
+    id 'kotlin-kapt'
 }
 apply plugin: 'kotlin-android'
 
@@ -81,7 +82,9 @@ dependencies {
     implementation files('libs/javassist.jar')
 
     implementation project(':router_compiler')
-    annotationProcessor project(':router_compiler')
+    kapt project(':router_compiler')
+    implementation 'com.google.auto.service:auto-service:1.1.1'
+    kapt 'com.google.auto.service:auto-service:1.1.1'
 
     implementation project(':lib-processor')
     annotationProcessor project(':lib-processor')
@@ -90,7 +93,7 @@ dependencies {
     implementation project(path: ':takeout')
 
     api(name: 'mmkv', ext: 'aar')
-    implementation "androidx.core:core-ktx:1.10.1"
+    implementation "androidx.core:core-ktx:1.9.0"
     implementation 'androidx.core:core-google-shortcuts:1.1.0'
     //implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.7.10"//$kotlin_version"
 

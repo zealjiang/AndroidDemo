@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.myapplication.databinding.ActivityMvvmBinding
 import com.example.myapplication.util.JavaReferenceTest
 import com.example.myapplication.util.ReferenceTest
+import com.example.myapplication.util.threadpool.AsyncTaskTest
 import com.example.myapplication.viewmodel.User
 import com.example.myapplication.viewmodel.UserViewModel
 import com.example.router.SimpleRouter
@@ -50,6 +51,11 @@ class MVVMActivity: AppCompatActivity() {
         binding?.btnTakeout?.setOnClickListener {
             testRoute()
         }
+
+
+        val test = AsyncTaskTest()
+        test.moreSyncTaskDoThen()
+
     }
 
     private fun testRoute() {

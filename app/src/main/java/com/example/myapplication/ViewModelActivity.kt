@@ -10,7 +10,9 @@ import com.example.myapplication.util.QuickSort
 import com.example.myapplication.util.SelectSort
 import com.example.myapplication.viewmodel.User
 import com.example.myapplication.viewmodel.UserViewModel
+import com.example.router.compiler.annotation.MRoute
 
+@MRoute("/main/ViewModelActivity")
 class ViewModelActivity : AppCompatActivity(){
     private var binding: ActivityViewmodelBinding? = null
     private var userViewModel: UserViewModel? = null

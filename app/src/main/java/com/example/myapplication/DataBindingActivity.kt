@@ -3,7 +3,9 @@ package com.example.myapplication
 import android.os.Bundle
 import androidx.fragment.app.FragmentActivity
 import com.example.myapplication.databinding.ActivityDataBindingBinding
+import com.example.router.compiler.annotation.MRoute
 
+@MRoute("/main/DataBindingActivity")
 class DataBindingActivity : FragmentActivity() {
 
 

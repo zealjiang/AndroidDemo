@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -42,9 +43,12 @@ dependencies {
 
     implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.6.2'
-    implementation project(path: ':router')
+
     implementation 'androidx.appcompat:appcompat:1.6.1'
 
-    implementation project(path: ':router_compiler')
-    annotationProcessor project(':router_compiler')
+    implementation project(':router_compiler')
+    //annotationProcessor project(':router_compiler') //使用annotationProcessor方式只能识别出java类上的注解
+    kapt project(':router_compiler') //使用kapt方式可以识别出java类和kotlin类上的注解
+    implementation project(path: ':router')
+    implementation 'com.google.auto.service:auto-service-annotations:1.1.1'
 }
