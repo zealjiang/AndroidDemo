@@ -60,7 +60,7 @@ public class BindingProcessor extends AbstractProcessor {
 
                         if(constructorBuilder == null){
                             //System.out.println("packageStr ="+packageStr+"  classStr ="+classStr);
-                            //要生成的java文件的类名：com.example.myapplication.apt.APTActivityBinding
+                            //要生成的java文件的类名：com.example.main.apt.APTActivityBinding
                             className = ClassName.get(packageStr,classStr+"Binding");
                             //生成构造器 public AptActivityBinding()
                             constructorBuilder = MethodSpec.constructorBuilder()
@@ -82,7 +82,7 @@ public class BindingProcessor extends AbstractProcessor {
             }
 
             if(hasBinding){
-                //生成com.example.myapplication.apt.AptActivityBinding类
+                //生成com.example.main.apt.AptActivityBinding类
                 TypeSpec buildClass = TypeSpec.classBuilder(className)
                         .addModifiers(Modifier.PUBLIC)
                         .addMethod(constructorBuilder.build())

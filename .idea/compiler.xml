@@ -21,10 +21,13 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
-      <module name="AndroidDemo.app" target="17" />
-      <module name="AndroidDemo.libkotlin" target="17" />
-      <module name="AndroidDemo.router" target="17" />
-      <module name="AndroidDemo.takeout" target="17" />
+      <module name="AndroidDemo.app" target="18" />
+      <module name="AndroidDemo.base" target="18" />
+      <module name="AndroidDemo.libkotlin" target="18" />
+      <module name="AndroidDemo.network" target="18" />
+      <module name="AndroidDemo.router" target="18" />
+      <module name="AndroidDemo.takeout" target="18" />
+      <module name="AndroidDemo.waimai" target="18" />
       <module name="My_Application.app" target="11" />
       <module name="My_Application.libkotlin" target="11" />
     </bytecodeTargetLevel>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context="com.example.main.MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -29,7 +29,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             />
-        <com.example.myapplication.views.SunriseView
+        <com.example.main.views.SunriseView
             android:id="@+id/sunrise_view"
             android:layout_width="match_parent"
             android:layout_height="100dp"

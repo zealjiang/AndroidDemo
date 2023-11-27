@@ -5,12 +5,12 @@ plugins {
 
 android {
     namespace 'com.example.waimai'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.waimai"
         minSdk 24
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
 

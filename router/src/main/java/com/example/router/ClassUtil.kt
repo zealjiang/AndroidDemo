@@ -16,7 +16,7 @@ object ClassUtil {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             if (null != applicationInfo.splitSourceDirs) {
-                sourcePaths.addAll(applicationInfo.splitSourceDirs)
+                sourcePaths.addAll(applicationInfo.splitSourceDirs!!)
                 Log.d(TAG, "splitSourceDirs ="+applicationInfo.splitSourceDirs)
             }
         }

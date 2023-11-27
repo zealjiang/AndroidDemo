@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.example.router.SimpleRouter
 import com.example.router.compiler.annotation.MRoute
+import com.example.waimai.BuildConfig
 import com.example.waimai.databinding.ActivityTakeoutMainBinding
 
 @MRoute("/aa/MainActivity")

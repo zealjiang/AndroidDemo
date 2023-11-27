@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.myapplication">
+    package="com.example.main">
     <!-- 悬浮窗权限 -->
     <uses-permission android:name="android.permission.SET_WALLPAPER" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
@@ -22,7 +22,7 @@
     <uses-feature android:name="android.hardware.camera.any" />
     <uses-feature android:glEsVersion="0x00020000" android:required="true" />
     <application
-        android:name=".MApplication"
+        android:name="com.example.application.MApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -66,6 +66,15 @@
         </activity>
 
         <activity
+            android:name=".MainActivity"
+            android:exported="true">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+
+        <activity
             android:name=".MVPActivity"
             android:exported="true">
 <!--            <intent-filter>
@@ -94,7 +103,7 @@
         </activity>
 
         <activity
-            android:name="com.example.myapplication.nfc.NFCBankCardActivity"
+            android:name="com.example.main.nfc.NFCBankCardActivity"
             android:launchMode="singleInstance"
             android:exported="true">
 <!--            <intent-filter>
@@ -130,40 +139,46 @@
             android:name=".opengl.CameraXAppActivity"
             android:exported="false" />
         <activity
-            android:name=".opengl.Frame3DActivity"
+            android:name="com.example.main.opengl.Frame3DActivity"
             android:exported="false" />
         <activity
-            android:name=".arouter.RActivity3"
+            android:name="com.example.main.arouter.RActivity3"
             android:exported="false" />
         <activity
-            android:name=".arouter.RActivityFragment"
+            android:name="com.example.main.arouter.RActivityFragment"
             android:exported="false" />
         <activity
-            android:name=".arouter.RActivity1"
+            android:name="com.example.main.arouter.RActivity1"
             android:exported="false" />
         <activity
             android:name=".TestActivi"
             android:exported="false" />
         <activity
-            android:name=".GoogleLoginActivity"
+            android:name="com.example.main.GoogleLoginActivity"
             android:exported="true">
         </activity>
-        <activity android:name=".AppListActivity" />
-        <activity android:name=".SecondActivity" />
+        <activity android:name="com.example.main.AppListActivity"
+            android:exported="true">
+<!--            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+        <activity android:name="com.example.main.SecondActivity" />
         <activity
-            android:name=".ThirdActivity"
+            android:name="com.example.main.ThirdActivity"
             android:process=":third" />
-        <activity android:name=".apt.APTActivity2" />
-        <activity android:name=".annotation.AnnotationActivity" />
+        <activity android:name="com.example.main.apt.APTActivity2" />
+        <activity android:name="com.example.main.annotation.AnnotationActivity" />
         <activity
-            android:name=".onepixel.KeepTaskOnepxActivity"
+            android:name="com.example.main.onepixel.KeepTaskOnepxActivity"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:process=":pixel"
             android:taskAffinity=":onepx"
             android:theme="@style/OnePxCustomTransparent" />
         <activity
-            android:name=".onepixel.KeepTaskOnepxActivity2"
+            android:name="com.example.main.onepixel.KeepTaskOnepxActivity2"
             android:excludeFromRecents="true"
             android:launchMode="singleTask"
             android:process=":back"
@@ -171,7 +186,7 @@
             android:theme="@style/OnePxCustomTransparent" />
 
         <service
-            android:name=".AdApkInstallOrOpenService"
+            android:name="com.example.main.AdApkInstallOrOpenService"
             android:exported="false"
             android:process=":worker">
             <intent-filter>
@@ -179,14 +194,14 @@
             </intent-filter>
         </service>
         <service
-            android:name=".JobSchedulerService"
+            android:name="com.example.main.JobSchedulerService"
             android:permission="android.permission.BIND_JOB_SERVICE" />
         <service
-            android:name=".log.MessengerService"
+            android:name="com.example.main.log.MessengerService"
             android:process=":custom_process" />
 
         <receiver
-            android:name=".AdApkInstallOrOpenReceiver"
+            android:name="com.example.main.AdApkInstallOrOpenReceiver"
             android:exported="false"
             android:process=":worker">
             <intent-filter>
