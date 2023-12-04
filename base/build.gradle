@@ -1,16 +1,19 @@
+import com.example.plugin.*
+
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.example.plugin'
 }
 
 android {
     namespace 'com.example.base'
-    compileSdk 34
+    compileSdk Versions.compileSdk
 
     defaultConfig {
-        minSdk 24
+        minSdk Versions.minSdkVersion
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        //testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
     }
 
@@ -30,11 +33,11 @@ android {
 }
 
 dependencies {
+    implementation Dependencies.core_ktx
+    implementation Dependencies.androidx_appcompat
+    implementation Dependencies.material
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
-    testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    //testImplementation 'junit:junit:4.13.2'
+    //androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    //androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
 }

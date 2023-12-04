@@ -9,3 +9,4 @@ include ':router_compiler'
 include ':waimai'
 include ':network'
 include ':base'
+includeBuild('version-plugin')

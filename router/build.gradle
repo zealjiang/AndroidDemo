@@ -1,14 +1,16 @@
+import com.example.plugin.*
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.example.plugin'
 }
 
 android {
     namespace 'com.example.mylibrary' //命名空间 此命名空间用作其生成的 和 R 类的 Kotlin 或 Java 软件包名称
-    compileSdk 34
+    compileSdk Versions.compileSdk
 
     defaultConfig {
-        minSdk 24
+        minSdk Versions.minSdkVersion
 
         consumerProguardFiles "consumer-rules.pro"
     }
@@ -30,7 +32,7 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.9.0'
+    implementation Dependencies.core_ktx
+    implementation Dependencies.androidx_appcompat
+    implementation Dependencies.material
 }

@@ -27,6 +27,9 @@
       <module name="AndroidDemo.network" target="18" />
       <module name="AndroidDemo.router" target="18" />
       <module name="AndroidDemo.takeout" target="18" />
+      <module name="AndroidDemo.version-plugin" target="18" />
+      <module name="AndroidDemo.version-plugin.main" target="18" />
+      <module name="AndroidDemo.version-plugin.test" target="18" />
       <module name="AndroidDemo.waimai" target="18" />
       <module name="My_Application.app" target="11" />
       <module name="My_Application.libkotlin" target="11" />

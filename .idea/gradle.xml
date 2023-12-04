@@ -4,6 +4,17 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <compositeConfiguration>
+          <compositeBuild compositeDefinitionSource="SCRIPT">
+            <builds>
+              <build path="$PROJECT_DIR$/version-plugin" name="version-plugin">
+                <projects>
+                  <project path="$PROJECT_DIR$/version-plugin" />
+                </projects>
+              </build>
+            </builds>
+          </compositeBuild>
+        </compositeConfiguration>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -20,6 +31,7 @@
             <option value="$PROJECT_DIR$/router" />
             <option value="$PROJECT_DIR$/router_compiler" />
             <option value="$PROJECT_DIR$/takeout" />
+            <option value="$PROJECT_DIR$/version-plugin" />
             <option value="$PROJECT_DIR$/waimai" />
           </set>
         </option>
