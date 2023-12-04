@@ -19,6 +19,5 @@ class InvocationHandlerImpl(private val realObject: ICar) : InvocationHandler{
          *             throws IllegalAccessException, IllegalArgumentException, InvocationTargetException;
          */
         return method?.invoke(realObject, *(args ?: emptyArray()))
-        Service
     }
 }
