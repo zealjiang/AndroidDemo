@@ -1,14 +1,16 @@
+import com.example.plugin.*
 plugins {
     id 'com.android.library'
     id 'kotlin-android'
+    id 'com.example.plugin'
 }
 
 android {
-    compileSdk 34
+    compileSdk Versions.compileSdk
     namespace 'com.example.libkotlin'
 
     defaultConfig {
-        minSdkVersion 24
+        minSdk Versions.minSdkVersion
         targetSdkVersion 34
         consumerProguardFiles "consumer-rules.pro"
     }

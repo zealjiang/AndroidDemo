@@ -1,18 +1,18 @@
+import com.example.plugin.*
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'com.example.plugin'
 }
 
 android {
     namespace 'com.example.waimai'
-    compileSdk 34
+    compileSdk Versions.compileSdk
 
     defaultConfig {
         applicationId "com.example.waimai"
-        minSdk 24
-        targetSdk 34
-        versionCode 1
-        versionName "1.0"
+        minSdk Versions.minSdkVersion
+        targetSdk Versions.targetSdkVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {

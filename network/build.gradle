@@ -1,14 +1,16 @@
+import com.example.plugin.*
 plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
+    id 'com.example.plugin'
 }
 
 android {
     namespace 'com.example.network'
-    compileSdk 33
+    compileSdk Versions.compileSdk
 
     defaultConfig {
-        minSdk 24
+        minSdk Versions.minSdkVersion
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
