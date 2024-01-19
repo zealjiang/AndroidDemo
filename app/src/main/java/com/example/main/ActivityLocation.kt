@@ -29,12 +29,12 @@ class ActivityLocation : ComponentActivity() {
 
         //gps
         findViewById<Button>(R.id.btn_gps_is_open).setOnClickListener {
-            val isOpen = LocationUtil.checkGPSIsOpen(this)
+            val isOpen = LocationUtil.isGpsOpen(this)
             tvLog.text = "gps is open :$isOpen"
         }
 
         findViewById<Button>(R.id.btn_gps_open).setOnClickListener {
-            LocationUtil.goToGpsSetting(this)
+            LocationUtil.openGpsSettingPage(this)
         }
     }
 
