@@ -3,7 +3,11 @@ plugins {
     id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'com.example.plugin'
+    id 'maven-publish'
 }
+
+    group = 'com.example.router'
+    version = '1.0'
 
 android {
     namespace 'com.example.router' //命名空间 此命名空间用作其生成的 和 R 类的 Kotlin 或 Java 软件包名称
@@ -35,4 +39,18 @@ dependencies {
     implementation Dependencies.core_ktx
     implementation Dependencies.androidx_appcompat
     implementation Dependencies.material
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            // Creates a Maven publication called "release".
+            release(MavenPublication) {
+                from components.release
+                groupId = 'com.github.zealjiang'
+                artifactId = 'AndroidDemo'
+                version = '1.0'
+            }
+        }
+    }
 }
