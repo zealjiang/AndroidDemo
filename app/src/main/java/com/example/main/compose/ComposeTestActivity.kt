@@ -15,7 +15,9 @@ class ComposeTestActivity : ComponentActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent{}
+        setContent{
+            Text("Hello world")
+        }
     }
 
 
