@@ -20,10 +20,9 @@ class ComposeTestActivity : ComponentActivity(){
         }
     }
 
-
+    @Composable
+    fun MessageCard(name: String) {
+        Text(text = "Hello $name")
+    }
 }
 
-@Composable
-fun MessageCard(name: String) {
-    Text(text = "Hello $name")
-}
